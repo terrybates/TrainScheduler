@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en-us">
+<head>
+  <meta charset="UTF-8">
+
+  <title>Train Schedule</title>
+    <!--jquery -->
+    <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+    <!-- Latest compiled and minified JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.7/angular.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/momentjs/2.12.0/moment.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="train.css">
+    
+
+    <!-- Firebase Reference -->
+    <script src="https://www.gstatic.com/firebasejs/live/3.0/firebase.js"></script>
+</head>
+<!--This is the table for train schedule-->
+<body>
+	
+  <div class="img">
+  
+  <img src="images/train_image.jpg" alt="Ride the Train" style="width:1150px;height:300px;">
+  
+
+<div class = "container">
+		<div class="panel panel-primary">
+            <div class="panel-heading">
+              <h3 class="panel-title"><strong>Train Schedule</strong></h3>
+            </div>
+            <div class="panel-body">
+              <table class="table table-hover" id="train-table">
+                <thead>
+                  <tr>
+                    <th>Train Name</th>
+                    <th>Destination</th>
+                    <th>Frequency (min)</th>
+                    <th>Next Arrival</th>
+                    <th>Minutes Away</th>  
+                  </tr>
+                </thead>
+                <tbody>
+                </tbody>
+              </table>
+            </div>
+          </div>
+ <!--this is the form for the administrator to input data -->
+
+ 	<form role="form">
+ 		<!-- Sign-Up Panel-->
+      <div class="col-lg-12">
+        <div class="panel panel-default">
+          <div class="panel-heading">
+            <h3 class="panel-title">Adding Train</h3>
+          </div>
+          <div class="panel-body">
+
+        <div class="form-group">
+            <label for="trainName-input">Train Name</label>
+            <input class="form-control" id="trainName-input" type="text">
+        </div>                             
+
+        <div class="form-group">
+            <label for="destination-input">Destination</label>
+            <input class="form-control" id="destination-input" type="text">
+        </div>
+              
+        <div class="form-group">
+            <label for="name-input">First Train Time (hh:mm)</label>
+            <input class="form-control" id="firstTrain-input" type="text">                         
+        </div>
+
+        <div class="form-group">
+            <label for="frequency-input">Frequency (min)</label>
+            <input class="form-control" id="frequency-input" type="number">
+        </div>
+
+        <button class="btn btn-default" id="add-train-btn" type="submit">Submit</button>
+            
+
+		</div>
+	</form>
+		
+	</div>
+  <script src="traindata.js"></script>
+
+</body>
+</html>
